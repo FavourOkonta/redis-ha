@@ -12,7 +12,7 @@ resource "aws_instance" "redis" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = file("~/.ssh/id_rsa") # Substitua pela localização correta da sua chave privada SSH
+      private_key = file("~/.ssh/id_rsa") # replace by correct place of id_rsa pub/priv key
       host        = self.public_ip
     }
   }

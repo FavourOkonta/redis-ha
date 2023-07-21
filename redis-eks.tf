@@ -1,6 +1,6 @@
 provider "helm" {
   kubernetes {
-    config_path = "~/.kube/config" # Seu caminho para o arquivo de configuração do Kubernetes pode ser diferente
+    config_path = "~/.kube/config" # must define the correct place to k8s
   }
 }
 
@@ -27,6 +27,6 @@ resource "helm_release" "my_redis" {
 
   set {
     name  = "password"
-    value = "secretpassword" # Substitua por sua própria senha
+    value = "secretpassword" # password
   }
 }
